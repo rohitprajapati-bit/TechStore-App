@@ -1,16 +1,11 @@
 # Flutter eCommerce TechStore App
 
-A new Flutter project.
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Android Screenshots
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1724334885](https://github.com/user-attachments/assets/25cc123c-f32d-4b39-a10d-9008a940140b)
+![Screenshot_1724334633](https://github.com/user-attachments/assets/bf689d49-b053-41a0-ac87-efe892890c31)
+![Screenshot_1724334605](https://github.com/user-attachments/assets/f8009788-c2df-4697-bbb6-e4eda7958f11)
