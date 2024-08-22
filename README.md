@@ -1,4 +1,4 @@
-# secondprojec
+# Flutter eCommerce TechStore App
 
 A new Flutter project.
 
