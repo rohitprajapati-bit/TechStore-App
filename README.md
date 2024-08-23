@@ -1,7 +1,5 @@
 # Flutter eCommerce TechStore App
 
-
-
 ## Getting Started
 
 ## Key Features:
