@@ -6,7 +6,7 @@ Detailed product specifications, including processor, RAM, storage, and more.
 High-resolution images to give users a clear view of the products.
 Product filtering and sorting options by price, brand, and features.
 
-## 3. Wishlist and Cart Management:
+## 2. Wishlist and Cart Management:
 Users can save products to their wishlist for future purchases.
 Easy cart management allows users to add or remove items effortlessly.
 Notifications for price drops or stock availability for wishlist items.
