@@ -1,7 +1,8 @@
 
-# Flutter E-Commerce TechStore App
 
-A Flutter-based e-commerce application that uses REST API for user authentication, displaying products, product details, and adding items to the cart. The app is designed for selling tech products like laptops and phones, providing a smooth and responsive user experience.
+# TechStore App
+
+A Flutter-based e-commerce application that loads product data from local JSON files and provides user authentication. The app features a product catalog, detailed product views, and a secure login system.
 
 ## Table of Contents
 
@@ -9,7 +10,6 @@ A Flutter-based e-commerce application that uses REST API for user authenticatio
 - [Technology Stack](#technology-stack)
 - [Architecture](#architecture)
 - [State Management](#state-management)
-- [API Integration](#api-integration)
 - [Pages and Functionality](#pages-and-functionality)
 - [Setup](#setup)
 - [Screenshots](#screenshots)
@@ -18,10 +18,9 @@ A Flutter-based e-commerce application that uses REST API for user authenticatio
 
 ## Features
 
-- **User Authentication**: Login and registration using API.
-- **Product Catalog**: Displays all products fetched from an API.
-- **Product Details**: Shows detailed product information.
-- **Add to Cart**: Add products to the cart using API calls.
+- **User Authentication**: Login functionality using locally stored credentials.
+- **Product Catalog**: Loads product data from a local JSON file.
+- **Product Details**: Detailed product view loaded from JSON data.
 - **Responsive UI**: Optimized for both mobile and tablet.
 - **MVVM Architecture**: Clear separation between UI and business logic.
 
@@ -30,75 +29,42 @@ A Flutter-based e-commerce application that uses REST API for user authenticatio
 - **Framework**: Flutter
 - **Language**: Dart
 - **State Management**: Provider
-- **Backend**: REST API for authentication, products, and cart management.
+- **Data Source**: Local JSON for products and product details.
 
 ## Architecture
 
-This app follows the MVVM (Model-View-ViewModel) architecture, ensuring scalability and easy maintenance.
+The app follows the MVVM (Model-View-ViewModel) architecture to ensure a clean separation of concerns between UI and business logic.
 
 ### Key Components:
 
-- **Model**: Represents data (user info, products, cart).
-- **View**: UI elements, such as login, product list, and cart pages.
-- **ViewModel**: Handles the business logic and API calls, bridging the model and the view.
+- **Model**: Manages data from JSON files (products and details).
+- **View**: UI components like product listings, login, and details screens.
+- **ViewModel**: Connects the Model with the View, handling user actions and data processing.
 
 ## State Management
 
-The **Provider** package is used to manage the state of the app. This helps efficiently handle data fetched from APIs and ensures that the UI updates reactively to state changes.
-
-## API Integration
-
-The app integrates with a custom REST API for the following features:
-
-- **Authentication API**: Users log in or register through an API.
-- **Products API**: Fetch all products to display in the catalog.
-- **Product Details API**: Retrieve details of a selected product.
-- **Cart API**: Add items to the cart and retrieve cart details.
-
-### Example API Endpoints:
-
-1. **Login API**: `/api/auth/login`
-   - Method: `POST`
-   - Body: `{ "email": "user@example.com", "password": "password123" }`
-
-2. **Products API**: `/api/products`
-   - Method: `GET`
-   - Response: `[{ "id": 1, "name": "Laptop", "price": 999, ... }]`
-
-3. **Product Details API**: `/api/products/{id}`
-   - Method: `GET`
-   - Response: `{ "id": 1, "name": "Laptop", "price": 999, "description": "...", ... }`
-
-4. **Add to Cart API**: `/api/cart/add`
-   - Method: `POST`
-   - Body: `{ "productId": 1, "quantity": 1 }`
+The app uses the **Provider** package for state management, ensuring a reactive UI that updates based on changes in data.
 
 ## Pages and Functionality
 
-### Authentication Pages
+### Authentication Page
 
-- **Login Page**: Users can log in using email and password through the authentication API.
-- **Register Page**: New users can sign up by providing an email, password, and other details.
+- **Login Page**: Allows users to log in using pre-defined credentials stored locally. Basic form validation ensures correct inputs.
 
 ### Product Catalog
 
-- **Product List Page**: Displays all products retrieved from the products API.
-- Users can scroll through products and filter them.
+- **Product List Page**: Loads and displays products from a local JSON file.
+- **Filtering**: Products can be filtered based on categories.
 
 ### Product Details
 
-- **Product Details Page**: Shows detailed information about a product, including images, specifications, and pricing.
-- API fetches product details for each selected item.
-
-### Cart
-
-- **Add to Cart**: Users can add products to their cart via the cart API.
-- **Cart Page**: Displays items in the cart with options to update quantities or proceed to checkout.
+- **Product Details Page**: Displays detailed information about a selected product, including images, description, and pricing.
+- Data for the details page is also loaded from a local JSON file.
 
 
 ## Setup
 
-To set up and run the project locally, follow the steps below:
+To set up and run the project locally, follow these steps:
 
 1. **Clone the repository**:
 
@@ -118,27 +84,19 @@ To set up and run the project locally, follow the steps below:
    flutter pub get
    ```
 
-4. **Set up the API**:
-
-   - Configure your API endpoints in the project, typically in a `config.dart` file.
-   - Ensure your backend API is running and ready to handle authentication, products, and cart operations.
-
-5. **Run the app**:
+4. **Run the app**:
 
    ```bash
    flutter run
    ```
 
-   Ensure your API is live and accessible.
-
 ## Contributors
 
- - **Rohit Prajapati** - API Integration / Junior Developer
+- **Rohit Prajapati** - Junior Developer
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 
 ## Android Screenshots
